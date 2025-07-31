@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+        .speed-test {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        .counter {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #4ecdc4;
+        }
+    </style>
+</head>
+<body>
+    <h1>Speed Test</h1>
+    <div class="speed-test">
+        <h2>Game Speed Test</h2>
+        <p>This counter should update every 500ms (2 times per second):</p>
+        <div class="counter" id="counter">0</div>
+        <p>Current speed: <span id="speed">500ms</span></p>
+        <button onclick="changeSpeed()">Change Speed</button>
+    </div>
+
+    <script>
+        let counter = 0;
+        let speed = 500;
+        let timeoutId = null;
+
+        function updateCounter() {
+            counter++;
+            document.getElementById('counter').textContent = counter;
+            document.getElementById('speed').textContent = speed + 'ms';
+            console.log('Update:', new Date().toLocaleTimeString(), 'Counter:', counter);
+            
+            timeoutId = setTimeout(updateCounter, speed);
+        }
+
+        function changeSpeed() {
+            if (timeoutId) {
+                clearTimeout(timeoutId);
+            }
+            speed = speed === 500 ? 1000 : 500;
+            updateCounter();
+        }
+
+        // Start the test
+        updateCounter();
+    </script>
+</body>
+</html> 

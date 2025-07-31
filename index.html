@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Adventure - Y8 Game</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1 class="game-title">🐍 Snake Adventure</h1>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+                <div class="speed">Speed: <span id="speed">1x</span></div>
+                <div class="difficulty">Difficulty: <span id="difficulty">Normal</span></div>
+                <div class="evolution">Evolution: <span id="evolution">Baby Snake</span></div>
+                <div class="ability">Ability: <span id="ability">None (0)</span></div>
+                <div class="territory">Territory: <span id="territory">0.0%</span></div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+            <div class="game-overlay" id="gameOverlay">
+                <div class="overlay-content">
+                    <h2 id="overlayTitle">Snake Adventure</h2>
+                    <p id="overlayMessage">Use arrow keys to control the snake. Eat food to grow and score points!</p>
+                    <button id="startButton" class="game-button">Start Game</button>
+                    <button id="restartButton" class="game-button" style="display: none;">Play Again</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-controls">
+            <div class="control-info">
+                <h3>How to Play:</h3>
+                <ul>
+                    <li>Use arrow keys to move the snake</li>
+                    <li>Eat the red food to grow and score points</li>
+                    <li>Avoid hitting walls or yourself</li>
+                    <li>Try to get the highest score!</li>
+                </ul>
+            </div>
+            <div class="mobile-controls">
+                <button id="upBtn" class="control-btn">↑</button>
+                <div class="horizontal-controls">
+                    <button id="leftBtn" class="control-btn">←</button>
+                    <button id="rightBtn" class="control-btn">→</button>
+                </div>
+                <button id="downBtn" class="control-btn">↓</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Y8 SDK Integration -->
+    <script src="https://sdk.y8.com/js/y8.js"></script>
+    <script type="module" src="src/main.js"></script>
+</body>
+</html> 

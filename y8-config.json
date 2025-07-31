@@ -1,0 +1,53 @@
+{
+  "application": {
+    "name": "Snake Adventure",
+    "link": "https://your-domain.com/snake-adventure",
+    "redirect_url": "https://your-domain.com/snake-adventure/redirect",
+    "studio_name": "Your Studio Name",
+    "studio_email": "your-email@example.com",
+    "consumer_login_uri": "https://your-domain.com/snake-adventure/login",
+    "push_event_url": "https://your-domain.com/snake-adventure/events",
+    "terms_of_service_uri": "https://your-domain.com/snake-adventure/terms",
+    "privacy_policy_uri": "https://your-domain.com/snake-adventure/privacy",
+    "minimum_age": 13,
+    "image_url": "https://your-domain.com/snake-adventure/thumbnail.png",
+    "application_type": "app",
+    "security_level": "low"
+  },
+  "permissions": [
+    "nickname",
+    "generated_nickname",
+    "email",
+    "first_name",
+    "last_name",
+    "date_of_birth",
+    "language",
+    "gender",
+    "about_me"
+  ],
+  "ad_integration": {
+    "ad_placement_points": [
+      "game_start",
+      "every_100_points",
+      "game_over",
+      "high_score_achieved"
+    ],
+    "ad_frequency": "moderate",
+    "ad_types": ["banner", "interstitial"]
+  },
+  "game_features": {
+    "responsive_design": true,
+    "mobile_controls": true,
+    "keyboard_controls": true,
+    "local_storage": true,
+    "analytics_tracking": true,
+    "user_personalization": true
+  },
+  "content_rating": {
+    "violence": "none",
+    "language": "none",
+    "sexual_content": "none",
+    "drug_references": "none",
+    "suitable_for_all_ages": true
+  }
+} 
